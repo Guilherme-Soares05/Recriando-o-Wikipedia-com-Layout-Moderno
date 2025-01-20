@@ -2,43 +2,94 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Engenharia de Dados</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="main-header">
+        <nav class="header-nav">
+            <a href="/" aria-label="Página Inicial">
+                <img src="/images/logo.png" width="200" alt="Logo da Empresa/Site" class="logo">
+            </a>
+        </nav>
+        <h1 class="page-title">Engenharia de Dados</h1>
+    </header>
 
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
+    <main class="main-content">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Outros assuntos sobre Engenharia de Dados:</h2>
+            <nav class="sidebar-nav">
+                <ol class="sidebar-list">
+                    <li class="sidebar-item"><a href="#" class="sidebar-link">Engenharia de Dados na Nuvem</a></li>
+                    <li class="sidebar-item"><a href="#" class="sidebar-link">Qualidade de Dados</a></li>
+                    <li class="sidebar-item"><a href="#" class="sidebar-link">Processamento de Dados em Tempo Real</a></li>
+                    <li class="sidebar-item"><a href="#" class="sidebar-link">Automação e Orquestração</a></li>
+                    <li class="sidebar-item"><a href="#" class="sidebar-link">Data Lakehouse</a></li>
+                </ol>
+            </nav>
+        </aside>
 
-    <div class="bar"></div>
+        <article class="main-article">
+            <h2 class="article-title">O que é Engenharia de Dados?</h2>
+            <p class="article-paragraph">
+                A engenharia de dados é o ramo tech responsável pelo desenvolvimento e manutenção de sistemas que coletam, organizam, e processam dados. Esse campo é essencial para garantir que os dados brutos, muitas vezes não estruturados, sejam transformados em informações acessíveis e úteis para análises, aprendizado de máquina e outras aplicações. Tornar estes dados utilizáveis é um trabalho técnico que envolve computação e armazenamento, bem como processamento de dados.</p>
 
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
-        </div>
+            <h2 class="article-title">O que faz um engenheiro de dados?</h2>
+            <p class="article-paragraph">Um engenheiro de dados é especializado na construção e manutenção de sistemas que permitem a coleta, armazenamento, processamento e disponibilização de grandes volumes de dados. Esse profissional garante que os dados estejam organizados e acessíveis para que possam ser utilizados por cientistas de dados, analistas e outras equipes da organização.</p>
 
-        <div class="main">
+            <h2 class="article-title"> Cientista de dados </h2>
+            <p class="article-paragraph">
+                O cientista de dados é um profissional que se concentra na análise e interpretação dos dados para extrair insights significativos e apoiar a tomada de decisões.
+            </p>
             
-        </div>
+            <h2 class="article-title"> Ferramentas </h2>
 
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#">Âncoras</a></li>
+            <h4 class="article-title"> Computação </h4>
+            <p class="article-paragraph">
+                A computação de alto desempenho tem um papel fundamental no processamento e análise de grandes volumes de dados, sendo uma componente crucial na engenharia de dados. Uma abordagem amplamente adotada nesse campo é a programação de fluxo de dados, onde a computação é modelada por meio de um gráfico direcionado conhecido como gráfico de fluxo de dados. Os nós são as operações e as arestas representam o fluxo de dados.<br> <br>
+
+                Essa metodologia permite a execução eficiente e paralela de processos, o que é essencial para lidar com os volumes crescentes de dados. Entre as implementações mais populares dessa abordagem estão o Apache Spark, amplamente utilizado para processamento de grandes conjuntos de dados, e o TensorFlow, especificamente projetado para aprendizado profundo. <br> <br>
+                
+                Recentemente, surgiram implementações mais avançadas, como o Differential e o Timely Dataflow, que utilizam técnicas de computação incremental. Essas técnicas permitem um processamento de dados ainda mais eficiente, atualizando apenas as partes do sistema que são afetadas por novas informações, em vez de reprocessar todo o conjunto de dados.
+            </p>
+            <h4 class="article-title"> Armazenamento </h4>
+            <p class="article-paragraph">
+                Os dados podem ser armazenados de diversas maneiras, dependendo de como serão utilizados, e essa escolha é um fator crucial na otimização dos sistemas de armazenamento e processamento. 
+                <br> <br> Engenheiros de dados trabalham na busca por redução de custos e melhorias na eficiência. Para isso, eles empregam técnicas como compactação, que reduz o espaço necessário para armazenar dados; particionamento, que divide grandes conjuntos de dados em partes menores e mais gerenciáveis; e arquivamento, que transfere dados antigos ou menos utilizados para sistemas de armazenamento de longo prazo. Essas práticas permitem que as empresas gerenciem seus dados de maneira mais eficaz, mantendo a performance e a escalabilidade dos sistemas de informação.
+            </p>
+            <h4 class="article-title"> Bancos de dados </h4>
+            <p class="article-paragraph">
+                Quando os dados são estruturados e requerem algum tipo de processamento de transações online, os bancos de dados, em geral, são a solução escolhida. Tradicionalmente, os bancos de dados relacionais foram amplamente utilizados, pois oferecem fortes garantias de correção de transações através do modelo ACID (Atomicidade, Consistência, Isolamento e Durabilidade). A maioria desses bancos de dados relacionais utiliza a linguagem SQL para realizar consultas e manipular dados.<br><br>
+
+                No entanto, à medida que os volumes de dados começaram a crescer exponencialmente na década de 2010, os bancos de dados NoSQL ganharam popularidade. Ao contrário dos bancos de dados relacionais, os sistemas NoSQL são projetados para escalar horizontalmente de forma mais eficaz, abrindo mão das rigorosas garantias de transação ACID em favor de uma maior flexibilidade e desempenho em cenários de grandes volumes de dados. Eles também ajudam a mitigar a incompatibilidade de impedância objeto-relacional, que pode ser um desafio nos bancos de dados relacionais.<br><br>
+
+                Mais recentemente, as bases de dados NewSQL surgiram como uma tentativa de combinar o melhor dos dois mundos: a escalabilidade horizontal dos bancos de dados NoSQL com as garantias ACID dos bancos de dados relacionais. Essa abordagem visa atender às necessidades de aplicações modernas que demandam tanto alta escalabilidade quanto integridade transacional.
+            </p>
+            <h4 class="article-title"> Data warehouse </h4>
+            <p class="article-paragraph">
+                Quando os dados são estruturados e o foco está no processamento analítico online, em vez de transações online, os data warehouses são a principal escolha. Esses armazéns de dados são projetados para permitir a análise em larga escala, mineração de dados e aplicações de inteligência artificial, oferecendo capacidades que vão além do que os bancos de dados tradicionais podem proporcionar. <br> <br> 
+                
+                Na prática, os dados muitas vezes fluem de bancos de dados transacionais para data warehouses, onde são preparados e organizados para análises mais complexas.
+            </p>
+
+            <h4 class="article-title"> Data lakes </h4>
+            <p class="article-paragraph">
+                Um data lake é um repositório centralizado projetado para armazenar, processar e proteger grandes volumes de dados em uma ampla variedade de formatos. Diferente dos data warehouses, que são mais estruturados, os data lakes são capazes de acomodar dados estruturados provenientes de bancos de dados relacionais, dados semiestruturados como arquivos XML ou JSON, dados não estruturados como texto ou log de eventos, e até mesmo dados binários como imagens, vídeos e arquivos de áudio.
+            </p>
+
+        </article>
+
+        <nav aria-label="Índice do Artigo" class="article-index">
+            <h2 class="index-title">Neste Artigo</h2>
+            <ul class="index-list">
+                <li class="index-item"><a href="#" class="index-link">Âncoras</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </main>
 
-    <div class="footer">
-
-    </div>
+    <footer class="main-footer">
+        <p class="footer-text">&copy; Feito por Guilherme Soares</p>
+    </footer>
 </body>
 </html>

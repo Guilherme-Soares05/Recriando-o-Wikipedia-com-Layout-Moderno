@@ -1,38 +1,92 @@
-body, html {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
-.bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
+
+h1 {
+    width: 65%;
+    padding: 0px;
 }
-.content {
+
+ul {
+    list-style: none;
+    padding-left: 1rem; /* Use rem para melhor escalabilidade */
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Removido .bar, pois o elemento foi removido do HTML */
+
+main {
     max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
+    margin: 2rem auto; /* Adicionei margem superior e inferior */
     display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
+    grid-gap: 2rem; /* Ajustei o gap */
+    grid-template-areas: "sidebar main aside"; /* Use nomes de áreas mais semânticos */
+    grid-template-columns: minmax(15rem, 1fr) minmax(40rem, 3fr) minmax(15rem, 1fr); /* Ajustei as colunas para melhor responsividade */
+    padding: 0 1rem; /* Simplifiquei o padding */
+}
+
+/* Estilos para as áreas do grid */
+aside {
+    grid-area: sidebar;
+    border-right: 1px solid #cdcdcd;
     padding-right: 1rem;
 }
-.footer {
+
+article {
+    grid-area: main;
+    padding: 0 1rem;
+}
+
+nav[aria-label="Índice do Artigo"] { /* Estilo específico para a navegação de âncoras */
+    grid-area: aside;
+    border-left: 1px solid #cdcdcd;
+    padding-left: 1rem;
+}
+
+footer {
     min-height: 100px;
-    border-top: solid 1px #cdcdcd;
+    border-top: 1px solid #cdcdcd;
+    padding: 1rem; /* Adicionei padding para o conteúdo não ficar colado na borda */
+    text-align: center; /* Centralizei o texto do rodapé */
 }
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
-}
-.sidebar {
-    border-right: solid 1px #cdcdcd;
-}
+
 figure {
     text-align: center;
+    margin: 1rem 0; /* Adicionei margem para espaçamento */
+}
+
+/* Estilos para o header */
+header {
+    padding: 1rem;
+    border-bottom: 1px solid #cdcdcd;
+    display: flex;
+    justify-content: space-between; /* Alinha o logo e o título */
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    main {
+        grid-template-areas:
+            "main"
+            "sidebar"
+            "aside";
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    aside {
+        border: none; /* Remove as bordas em telas menores */
+        padding: 1rem;
+    }
+
+    nav[aria-label="Índice do Artigo"] {
+        border: none;
+        padding: 1rem;
+    }
 }
